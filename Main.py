@@ -93,7 +93,7 @@ def SpeakText(command):
     engine.runAndWait()
 
 def runCmd():
-    print(cmds)
+    #print(cmds)
     randomlyPickedCommand = random.choice(cmds)
     if randomlyPickedCommand[0] == "/":
         randomlyPickedCommand = randomlyPickedCommand[1:]
@@ -118,7 +118,7 @@ while True:
             r.adjust_for_ambient_noise(source2, duration=0.2)
 
             # listens for the user's input
-            audio2 = r.listen(source2, phrase_time_limit=5)
+            audio2 = r.listen(source2, phrase_time_limit=7)
 
             # Using google to recognize audio
             audioText = r.recognize_google(audio2)
